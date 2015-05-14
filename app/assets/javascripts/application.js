@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap.min
 //= require_tree .
 
 $("#function_call").on("ajax:success", function(e, data, status, xhr) {
