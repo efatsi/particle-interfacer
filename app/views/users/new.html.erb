@@ -1,0 +1,29 @@
+<h2>Sign up</h2>
+
+<div class="well col-md-6">
+  <h2>Edit Account</h2>
+  <br>
+
+  <%= nested_form_for @user do |f| %>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+
+    <div><%= f.label :access_token %><br />
+    <%= f.text_field :access_token, class: "form-control" %></div>
+
+    <br>
+
+    <%= render "shared/core_fields", f: f %>
+
+    <br>
+    <br>
+
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
+  <% end %>
+</div>

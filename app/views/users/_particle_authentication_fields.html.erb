@@ -1,0 +1,13 @@
+<% if current_user %>
+  <%= f.label :core_id, "Core" %>
+  <%= f.select :core_id, core_options, class: "form-control" %>
+  <br>
+<% else %>
+  <%= f.label :access_token, "Access Token" %>
+  <%= f.text_field :access_token, class: "form-control" %>
+
+  <br>
+
+  <%= f.label :core_id, "Core ID" %>
+  <%= f.text_field :core_id, class: "form-control" %>
+<% end %>

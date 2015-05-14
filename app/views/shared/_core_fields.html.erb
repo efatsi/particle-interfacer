@@ -1,0 +1,11 @@
+<%= f.fields_for :cores do |g| %>
+  <div class="well">
+    <%= g.label :name %>
+    <%= g.text_field :name, class: "form-control" %>
+    <%= g.label :core_id, "Core ID" %>
+    <%= g.text_field :core_id, class: "form-control" %>
+  <br>
+  <%= g.link_to_remove "Remove this Core" %>
+  </div>
+<% end %>
+<%= f.link_to_add "Add a Core", :cores %>

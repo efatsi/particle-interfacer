@@ -1,0 +1,19 @@
+<div class="well col-md-6">
+  <h2>Edit Account</h2>
+  <br>
+
+  <%= nested_form_for @user do |f| %>
+    <%= f.label :access_token, "Access Token" %>
+    <%= f.text_field :access_token, class: "form-control" %>
+
+    <br>
+
+    <%= render "shared/core_fields", f: f %>
+
+    <br>
+    <br>
+
+    <%= f.submit "Update", class: 'btn btn-primary' %>
+    <%= link_to "Cancel", root_url, class: 'btn btn-default' %>
+  <% end %>
+</div>

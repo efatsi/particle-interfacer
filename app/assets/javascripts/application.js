@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+//= require jquery_nested_form
 
 $("#function_call").on("ajax:success", function(e, data, status, xhr) {
   $("#function_call_results").val(data.response);

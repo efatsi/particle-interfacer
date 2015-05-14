@@ -3,13 +3,7 @@
   <br>
 
   <%= form_for :api_call, remote: true, url: '/function', html: {id: "function_call"} do |f| %>
-    <%= f.label :access_token, "Access Token" %>
-    <%= f.text_field :access_token, class: "form-control" %>
-
-    <br>
-
-    <%= f.label :core_id, "Core ID" %>
-    <%= f.text_field :core_id, class: "form-control" %>
+    <%= render "users/particle_authentication_fields", f: f %>
 
     <br>
 
@@ -38,13 +32,7 @@
   <br>
 
   <%= form_for :api_call, remote: true, url: '/variable', html: {id: "retrieve_variable"} do |f| %>
-    <%= f.label :access_token, "Access Token" %>
-    <%= f.text_field :access_token, class: "form-control" %>
-
-    <br>
-
-    <%= f.label :core_id, "Core ID" %>
-    <%= f.text_field :core_id, class: "form-control" %>
+    <%= render "users/particle_authentication_fields", f: f %>
 
     <br>
 
