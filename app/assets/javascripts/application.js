@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$("#function_call").on("ajax:success", function(e, data, status, xhr) {
+  $("#function_call_results").val(data.response);
+})
+
+$("#retrieve_variable").on("ajax:success", function(e, data, status, xhr) {
+  $("#retrieve_variable_results").val(data.response);
+})
