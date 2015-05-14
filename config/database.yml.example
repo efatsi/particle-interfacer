@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: interfacer_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: interfacer_test
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: interfacer_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
