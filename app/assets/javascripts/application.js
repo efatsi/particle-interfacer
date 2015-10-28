@@ -16,8 +16,16 @@
 //= require_tree .
 //= require jquery_nested_form
 
+$("#function_call").submit(function() {
+  $("#function_call_results").val("...")
+})
+
 $("#function_call").on("ajax:success", function(e, data, status, xhr) {
   $("#function_call_results").val(data.response);
+})
+
+$("#retrieve_variable").submit(function() {
+  $("#function_call_results").val("...")
 })
 
 $("#retrieve_variable").on("ajax:success", function(e, data, status, xhr) {
