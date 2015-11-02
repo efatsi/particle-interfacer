@@ -33,7 +33,22 @@ class ControlController < ApplicationController
     end
   end
 
+  def timeout
+    if current_user
+      current_user.try(:timeout)
+    else
+      10.seconds
+    end
+  end
+
   def core
-    RubySpark::Core.new(core_id, access_token)
+    @core ||= begin
+      RubySpark.configuration do |config|
+        config.access_token = access_token
+        config.timeout      = timeout
+      end
+
+      RubySpark::Core.new(core_id)
+    end
   end
 end

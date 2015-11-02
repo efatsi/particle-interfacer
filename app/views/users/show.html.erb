@@ -6,6 +6,9 @@
     <%= f.label :access_token, "Access Token" %>
     <%= f.text_field :access_token, class: "form-control" %>
 
+    <%= f.label :timeout, "Particle API Timeout" %>
+    <%= f.number_field :timeout, class: "form-control" %>
+
     <br>
 
     <%= render "shared/core_fields", f: f %>
