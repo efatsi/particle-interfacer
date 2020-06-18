@@ -1,4 +1,4 @@
-#Particle Interfacer
+#Particle Interfacer!
 
 Simple Rails app to interface with any Spark Core. Pretty much all work was done in [this commit](https://github.com/efatsi/particle-interfacer/commit/d5b7ab3a7c5a039c3f2e33a06aa9fa6fd6661ab7).
 
